@@ -1,0 +1,140 @@
+/* Базовые настройки страницы */
+body {
+    width: 100%;
+    font-family: "Montserrat", sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* Фоновая картинка */
+.background-dandelions {
+    position: absolute;
+    top: 0;
+    left: 21%;
+    width: 790px;
+    height: 697px;
+    z-index: -1;
+}
+
+/* Главный заголовок */
+.title {
+    width: 846px;
+    height: 78px;
+    margin: 220px auto 0;
+    color: #515076;
+    text-align: center;
+    font-size: 70px;
+    font-weight: 400;
+    z-index: 1;
+}
+
+/* Блок-сетка для карточек (БЭМ-блок product-list) */
+.product-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 45px;
+    width: 100%;
+    max-width: 1200px;
+    min-height: 1191px;
+    margin: 100px auto 0;
+}
+
+/* Главный БЭМ-блок карточки */
+.product-card {
+    display: flex;
+    flex-direction: column; /* Элементы выстраиваются друг под другом */
+    box-sizing: border-box; /* Чтобы padding не увеличивал ширину 340px */
+    width: 340px;
+    min-height: 573px;      /* Заменили height на минимальную высоту */
+    padding: 25px 25px 0 25px; /* Внутренние отступы, которые просили в задании */
+    background: #e4e4e4;
+    border: 1px solid #F7F7FA;
+}
+
+/* Изображение внутри карточки */
+.product-card__image {
+    display: block;
+    width: 290px;
+    height: 245px;
+    margin: 0 auto; /* Центрируем картинку внутри карточки */
+}
+
+/* Строка с типом кожи */
+.product-card__skin-type {
+    margin: 15px 0 0 0; /* Отступ только сверху, боковые убрали благодаря padding родителя */
+    color: #515076;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 24px;
+    text-transform: uppercase;
+}
+
+/* Название товара */
+.product-card__title {
+    margin: 5px 0 0 0;
+    color: #515076;
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 27px;
+}
+
+/* Описание товара */
+.product-card__description {
+    margin: 10px 0 0 0;
+    color: #515076;
+    font-size: 13px;
+    font-weight: 400;
+    line-height: 18px;
+}
+
+/* Текст "Состав:" */
+.product-card__composition-title {
+    margin: 15px 0 0 0;
+    color: #515076;
+    font-size: 13px;
+    font-weight: 400;
+    line-height: 18px;
+}
+
+/* Список состава */
+.product-card__composition-list {
+    margin: 5px 0 0 0;
+    padding-left: 20px; /* Отступ слева для маркеров списка */
+    color: #515076;
+    font-size: 13px;
+    font-weight: 400;
+    line-height: 18px;
+    list-style-type: circle; /* Задаем круглые маркеры здесь, а не в HTML */
+}
+
+/* Элемент списка состава */
+.product-card__composition-item {
+    margin-bottom: 4px; /* Небольшой отступ между строками состава */
+}
+
+/* Обертка для блока цены */
+.product-card__price-box {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: auto; /* Прижимает блок цены к самому низу карточки */
+    padding: 20px 0 25px 0; /* Отступы внутри блока цены */
+}
+
+/* Слово "Цена" */
+.product-card__price-label {
+    color: #515076;
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 24px;
+}
+
+/* Само значение цены (цифры) */
+.product-card__price-value {
+    color: #515076;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 24px;
+}
